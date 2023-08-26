@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Prediction</title>
+</head>
+<body>
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+        </div>
+        <form action="{{url_for('predict')}}" method="post">
+            <h3>Diabetic Prediction</h3>
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="Age" class="form-control" placeholder="Age" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Polyuria" class="form-control" placeholder="Polyuria (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Polydipsia" class="form-control" placeholder="Polydipsia (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Sudden Weight Loss" class="form-control" placeholder="Sudden Weight Loss (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Weakness" class="form-control" placeholder="Weakness (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Polyphagia" class="form-control" placeholder="Polyphagia (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Genital Thrush" class="form-control" placeholder="Genital Thrush (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Visual Blurring" class="form-control" placeholder="Visual Blurring (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Itching" class="form-control" placeholder="Itching (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Irritability" class="form-control" placeholder="Irritability (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Delayed Healing" class="form-control" placeholder="Delayed Healing (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Partial Paresis" class="form-control" placeholder="Partial Paresis (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Muscle Stiffness" class="form-control" placeholder="Muscle Stiffness (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Alopecia" class="form-control" placeholder="Alopecia (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Obesity" class="form-control" placeholder="Obesity (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Male" class="form-control" placeholder="Male (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Female" class="form-control" placeholder="Female (1/0)" value="" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Predict</button>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+                    <h3>Diabetes:</h3>
+                    <h3>{{hasil}}</h3>
+                </div>
+            </div>
+        </form>
+</div>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
